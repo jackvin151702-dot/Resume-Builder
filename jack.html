@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <h1>Resume Builder</h1>
+    <p>Create your professional resume easily</p>
+</header>
+
+<main class="container">
+    <section class="editor">
+        <h2>Enter Your Details</h2>
+
+        <form id="resumeForm">
+            <label>Full Name</label>
+            <input id="name" placeholder="Your full name" required>
+
+            <label>Job Title</label>
+            <input id="job" placeholder="e.g. Web Developer">
+
+            <label>Email</label>
+            <input id="email" type="email" placeholder="your@email.com">
+
+            <label>Phone</label>
+            <input id="phone" placeholder="Your phone number">
+
+            <label>Address</label>
+            <input id="address" placeholder="Your city">
+
+            <label>Career Objective</label>
+            <textarea id="objective" placeholder="Write your career objective"></textarea>
+
+            <label>Education</label>
+            <textarea id="education" placeholder="Degree, college, year, marks"></textarea>
+
+            <label>Skills</label>
+            <textarea id="skills" placeholder="HTML, CSS, JavaScript"></textarea>
+
+            <label>Projects</label>
+            <textarea id="projects" placeholder="Project name and description"></textarea>
+
+            <label>Experience</label>
+            <textarea id="experience" placeholder="Internship or work experience"></textarea>
+
+            <label>Achievements</label>
+            <textarea id="achievements" placeholder="Awards and achievements"></textarea>
+
+            <div class="buttons">
+                <button type="button" id="sampleBtn">Load Sample</button>
+                <button type="reset" class="secondary">Clear Form</button>
+            </div>
+
+            <button type="button" id="downloadBtn" class="download">
+                Download / Save as PDF
+            </button>
+        </form>
+    </section>
+
+    <section class="preview">
+        <h2 class="preview-heading">Resume Preview</h2>
+
+        <article id="resume" class="paper">
+            <div class="resume-header">
+                <h1 id="pName">Your Name</h1>
+                <h3 id="pJob">Your Job Title</h3>
+                <p id="pContact">Email | Phone | Address</p>
+            </div>
+
+            <section class="resume-section">
+                <h2>CAREER OBJECTIVE</h2>
+                <p id="pObjective">Your career objective will appear here.</p>
+            </section>
+
+            <section class="resume-section">
+                <h2>EDUCATION</h2>
+                <p id="pEducation">Your education details</p>
+            </section>
+
+            <section class="resume-section">
+                <h2>SKILLS</h2>
+                <p id="pSkills">Your skills</p>
+            </section>
+
+            <section class="resume-section">
+                <h2>PROJECTS</h2>
+                <p id="pProjects">Your projects</p>
+            </section>
+
+            <section class="resume-section">
+                <h2>EXPERIENCE</h2>
+                <p id="pExperience">Your experience</p>
+            </section>
+
+            <section class="resume-section">
+                <h2>ACHIEVEMENTS</h2>
+                <p id="pAchievements">Your achievements</p>
+            </section>
+        </article>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #263238;
+    line-height: 1.5;
+}
+
+.topbar {
+    background: #173b65;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.topbar h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 350px minmax(0, 1fr);
+    gap: 25px;
+    max-width: 1400px;
+    margin: 25px auto;
+    padding: 0 20px;
+    align-items: start;
+}
+
+.editor, .preview {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000012;
+    min-width: 0;
+}
+
+.editor h2, .preview-heading {
+    margin-bottom: 20px;
+    color: #173b65;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 13px 0 6px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccd4df;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 85px;
+    resize: vertical;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid #7ba9df;
+    border-color: #2463a6;
+}
+
+button {
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #2463a6;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.88;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+    margin: 18px 0 10px;
+}
+
+.buttons button {
+    flex: 1;
+}
+
+.secondary {
+    background: #64748b;
+}
+
+.download {
+    width: 100%;
+    background: #13834b;
+    margin-top: 5px;
+}
+
+.paper {
+    background: white;
+    padding: 35px;
+    min-height: 800px;
+    box-shadow: 0 2px 10px #00000010;
+    overflow-wrap: anywhere;
+}
+
+.resume-header {
+    text-align: center;
+    border-bottom: 3px solid #2463a6;
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+}
+
+.resume-header h1 {
+    color: #173b65;
+    font-size: 30px;
+    overflow-wrap: anywhere;
+}
+
+.resume-header h3 {
+    color: #2463a6;
+    margin: 5px 0;
+}
+
+.resume-header p {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.resume-section {
+    margin-bottom: 22px;
+}
+
+.resume-section h2 {
+    color: #173b65;
+    font-size: 15px;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 5px;
+    margin-bottom: 9px;
+}
+
+.resume-section p {
+    font-size: 13px;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 850px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .paper {
+        padding: 22px;
+        min-height: 500px;
+    }
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 12mm;
+    }
+
+    body {
+        background: white;
+        color: black;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .topbar, .editor, .preview-heading {
+        display: none !important;
+    }
+
+    .container {
+        display: block;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .preview {
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .paper {
+        box-shadow: none;
+        padding: 0;
+        min-height: 0;
+        overflow: visible;
+    }
+
+    .resume-section {
+        break-inside: avoid;
+    }
+}
